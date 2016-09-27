@@ -199,43 +199,142 @@ body {
 }
 
 .dropdown-submenu {
-    position:relative;
+  position:relative;
 }
 .dropdown-submenu>.dropdown-menu {
-    top:0;
-    left:100%;
-    margin-top:-6px;
-    margin-left:-1px;
-    -webkit-border-radius:0 6px 6px 6px;
-    -moz-border-radius:0 6px 6px 6px;
-    border-radius:0 6px 6px 6px;
+  top:0;
+  left:100%;
+  margin-top:-6px;
+  margin-left:-1px;
+  -webkit-border-radius:0 6px 6px 6px;
+  -moz-border-radius:0 6px 6px 6px;
+  border-radius:0 6px 6px 6px;
 }
 .dropdown-submenu:hover>.dropdown-menu {
-    display:block;
+  display:block;
 }
 .dropdown-submenu>a:after {
-    display:block;
-    content:" ";
-    float:right;
-    width:0;
-    height:0;
-    border-color:transparent;
-    border-style:solid;
-    border-width:5px 0 5px 5px;
-    border-left-color:#cccccc;
-    margin-top:5px;
-    margin-right:-10px;
+  display:block;
+  content:" ";
+  float:right;
+  width:0;
+  height:0;
+  border-color:transparent;
+  border-style:solid;
+  border-width:5px 0 5px 5px;
+  border-left-color:#cccccc;
+  margin-top:5px;
+  margin-right:-10px;
 }
 .dropdown-submenu:hover>a:after {
-    border-left-color:#ffffff;
+  border-left-color:#ffffff;
 }
 .dropdown-submenu.pull-left {
-    float:none;
+  float:none;
 }
 .dropdown-submenu.pull-left>.dropdown-menu {
-    left:-100%;
-    margin-left:10px;
-    -webkit-border-radius:6px 0 6px 6px;
-    -moz-border-radius:6px 0 6px 6px;
-    border-radius:6px 0 6px 6px;
+  left:-100%;
+  margin-left:10px;
+  -webkit-border-radius:6px 0 6px 6px;
+  -moz-border-radius:6px 0 6px 6px;
+  border-radius:6px 0 6px 6px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+
+p{ 
+ text-align: center; 
+ overflow: overlay;
+ position: relative;
+}
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgb(248, 248, 248)
+}
+
+#toolbox{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  padding: 1em;
+  z-index: 5;
+}
+
+#toolbox input{
+  width: 30px;
+  opacity: 0.4;
+}
+#toolbox input:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+#hidden-file-upload{
+  display: none;
+}
+
+#download-input{
+  margin: 0 0.5em;
+}
+
+.conceptG text{
+  pointer-events: none;
+}
+
+marker{
+  fill: #333;
+}
+
+g.conceptG rect{
+  fill: #F6FBFF;
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+g.conceptG:hover rect{
+  fill: rgb(200, 238, 241);
+}
+
+g.selected rect{
+  fill: rgb(250, 232, 255);
+}
+g.selected:hover rect{
+  fill: rgb(250, 232, 255);
+}
+
+path.link {
+  fill: none;
+  stroke: #333;
+  stroke-width: 6px;
+  cursor: default;
+}
+
+path.link:hover{
+  stroke: rgb(94, 196, 204);
+}
+
+g.connect-node rect{
+  fill: #BEFFFF;
+}
+
+path.link.hidden{
+  stroke-width: 0;
+}
+
+path.link.selected {
+  stroke: rgb(229, 172, 247);
 }
